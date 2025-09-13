@@ -1,0 +1,20 @@
+    summary: Register a new user
+    operationId: registerUser
+    description: Registers a new user and returns their details
+    tags:
+      - Auth
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../../components/schemas/register.yaml'
+    responses:
+      "201":
+        description: User successfully registered
+        content:
+          application/json:
+            schema:
+              $ref: ../../components/schemas/register.yaml
+      "400":
+        description: Validation error or user already exists

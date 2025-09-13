@@ -1,0 +1,21 @@
+    summary: Get shop by ID
+    operationId: getShopById
+    description: Returns details of a single shop by its unique identifier.
+    tags:
+      - Flower
+    parameters:
+      - in: path
+        name: id
+        required: true
+        schema:
+          type: string
+        description: Unique identifier of the shop
+    responses:
+      "200":
+        description: Shop details
+        content:
+          application/json:
+            schema:
+              $ref: '../../components/schemas/Shop.yaml'
+      "404":
+        description: Shop not found

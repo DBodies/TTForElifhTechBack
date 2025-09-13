@@ -1,0 +1,70 @@
+type: object
+required: 
+  - orderId
+  - userId
+  - flowerId
+  - quantity
+  - priceAtOrder
+  - totalPrice
+  - email
+  - phone
+  - deliveryAddress
+  - clientTimezone
+properties: 
+  _id: 
+    type: string
+    description: _id
+    example: 68c01855fb456e5d96dd934b
+  orderId:
+    type: string
+    description: Your order id
+    example: e4d3de19-a86c-48d3-99a6-484206f8c979
+  userId:
+    type: string
+    description: Your user id
+    example: 64bcd1234567abc987654321
+    items:
+      type: object
+      properties:
+        flowerId:
+          type: string
+          description: Flower id
+          example: 68bdc1621bda5a0e7af73d20
+        quantity:
+          type: integer
+          description: Items quantity
+          example: 2
+        priceAtOrder:
+          type: number
+          format: float
+          description: Price per item at order time
+          example: 1000
+  totalPrice:
+    type: string
+    description: Your order's price
+    example: 1000
+  name:
+    type: string
+    description: Your name
+    example: Denis
+  email:
+    type: string
+    description: Your email
+    example: "example@gmail.com"
+  phone:
+    type: string
+    description: your phone number
+    example: "+380564654561"
+  deliveryAddress:
+    type: string
+    description: Your delivery address
+    example: Kyiv, Khreshchatyk 10
+  clientTimezone:
+    type: string
+    description: Your timezone
+    example: Europe/Kyiv
+  status:
+    type: string
+    description: Status of the order
+    enum: [pending, paid, delivered, cancelled]
+    example: pending

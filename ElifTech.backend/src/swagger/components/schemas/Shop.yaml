@@ -1,0 +1,29 @@
+      type: object
+      required:
+        - name
+        - email
+        - phone
+        - address
+      properties:
+        _id:
+          type: string
+          description: Shop id
+          example: "68bdc1621bda5a0e7af73d1a"
+        name:
+          type: string
+          description: Shop name
+          example: "Bloom Flowers"
+        email:
+          type: string
+          format: email
+          description: Shop email 
+          example: "bloom@example.com"
+        phone:
+          type: string
+          description: Shop phone
+          pattern: '^\+380\d{9}$'
+          example: "+380991112233"
+        address:
+          type: string
+          description: Shop address
+          example: "Kyiv, Khreshchatyk 15"

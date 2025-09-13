@@ -1,0 +1,23 @@
+summary: Get all shops
+operationId: getAllShops
+description: Returns a list of shops. You can filter by name if query param is provided.
+tags:
+  - Flower
+parameters:
+  - in: query
+    name: name
+    schema:
+      type: string
+    required: false
+    description: Filter shops by name
+responses:
+  "200":
+    description: List of shops
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            $ref: ../../components/schemas/Shop.yaml
+  "400":
+    description: Shops not found

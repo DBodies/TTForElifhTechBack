@@ -1,0 +1,24 @@
+  get:
+    summary: Get flowers by shop
+    operationId: getFlowersByShop
+    description: Returns a list of flowers available in a specific shop by its unique identifier.
+    tags:
+      - Flower
+    parameters:
+      - in: path
+        name: shopId
+        required: true
+        schema:
+          type: string
+        description: Unique identifier of the shop
+    responses:
+      "200":
+        description: List of flowers in the shop
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '../../components/schemas/flower.yaml'
+      "404":
+        description: Shop not found

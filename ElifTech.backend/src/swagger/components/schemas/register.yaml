@@ -1,0 +1,20 @@
+type: object
+required: 
+  - name
+  - password
+  - email
+properties:
+  name: 
+    type: string
+    description: your name
+    example: Denis
+  password: 
+    type: string
+    description: Create a strong password
+  email: 
+    type: string
+    description: Enter your email address
+    example: example@gmail.com
+  favorites: 
+    type: boolean
+    description: Choose your favorites flower

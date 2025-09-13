@@ -1,0 +1,37 @@
+type: object
+required:
+  - name
+  - price
+  - dataAdded
+properties:
+  shopId:
+    type: string
+    description: shop identifier
+    example: "68bdc1621bda5a0e7af73d1a"
+  name:
+    type: string
+    description: flower name
+    example: "Rose"
+  description:
+    type: string
+    example: "Amazing spring roses"
+  price:
+    type: number
+    format: float
+    description: Flower price
+    example: 1000
+  images:
+    type: array
+    items:
+      type: string
+      format: uri
+      example: "https://example.com/rose.png"
+  dataAdded:
+    type: string
+    format: date
+    description: Date when flower was added
+    example: "2000-10-10"
+  isFavorite:
+    type: boolean
+  available:
+    type: boolean
